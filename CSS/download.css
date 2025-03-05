@@ -409,7 +409,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: 16px;
   border-radius: 32px;
   margin-top: 6px;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 1s;
 }
 
 .quality-progress-bar-success.active {
@@ -417,6 +417,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .design-progress {
+  width: 0%;
+}
+
+.design-progress.active {
   width: 85%;
 }
 
@@ -510,3 +514,76 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 16px;
   width: 250px;
 }
+/* Quality Guaranteed end */
+
+/* Footer Start */
+.footer {
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 14px 14px 0 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+  width: 100%;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.footer-left h1 {
+  font-family: var(--poppins-semibold);
+  font-size: 36px;
+}
+
+.footer-left p {
+  font-family: var(--poppins-regular);
+  font-size: 20px;
+  padding-top: 10px;
+  color: #DEDEDE;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 60px;
+}
+
+.footer-right-container h1 {
+  font-family: var(--poppins-semibold);
+  font-size: 18px;
+}
+
+.footer-right-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer-right-body p {
+  font-family: var(--poppins-regular);
+  font-size: 18px;
+  cursor: pointer;
+  color: #DEDEDE;
+}
+
+.footer-copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-family: var(--poppins-regular);
+  padding-bottom: 20px;
+}
+/* Footer end */
