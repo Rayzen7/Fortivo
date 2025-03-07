@@ -42,3 +42,42 @@ const articleData = [
         img: './assets/images/home/article/img6.png'
     },
 ];
+
+const tipsData = [
+    {
+        id: 1,
+        title: 'Block Gambling Sites',
+        desc: 'You can use parental control features on your device or browser to block access to gambling sites. In addition, there are blocking applications such as BetBlocker and Gamban that can help block gambling sites automatically.',
+        img: './assets/images/home/tips/img1.svg'
+    },
+    {
+        id: 2,
+        title: 'Online Gambling Risks',
+        desc: 'The Second Step to Avoid Online Gambling is to be aware of its dangers. On gambling sites, many people who initially just try it out, but eventually become addicted because they continue to hope to win and return the money they lost.',
+        img: './assets/images/home/tips/img2.svg'
+    },
+    {
+        id: 3,
+        title: 'Focus on Positivity',
+        desc: 'Instead of spending time gambling, try to find more useful and productive activities. Like you can start by pursuing a new hobby such as sports, reading, learning new skills or others so as not to spend time gambling.',
+        img: './assets/images/home/tips/img3.svg'
+    },
+    {
+        id: 4,
+        title: 'Manage Finances Wisely',
+        desc: 'Gambling often makes someone lose money without realizing it. Therefore, it is important to manage finances wisely. Create a strict spending budget and keep your money in an account that is difficult to access for impulsive transactions.',
+        img: './assets/images/home/tips/img4.svg'
+    },
+    {
+        id: 5,
+        title: 'Limit Environmental',
+        desc: "The environment plays a big role in shaping a person's habits, including online gambling. If you have friends or groups who often discuss or invite you to gamble, it's better to start keeping your distance.",
+        img: './assets/images/home/tips/img5.svg'
+    },
+    {
+        id: 6,
+        title: 'Seek Help if Addicted',
+        desc: 'There are many communities and counseling services that are ready to help people who want to quit gambling. Seeking help is a very important first step in breaking the habit of gambling in ourselves.',
+        img: './assets/images/home/tips/img6.svg'
+    },
+];
