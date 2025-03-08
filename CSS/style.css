@@ -122,6 +122,32 @@ body::-webkit-scrollbar-thumb:hover {
   transition: all ease-in-out 0.3s;
 }
 
+.navbar-container button {
+  outline: none;
+  border: none;
+  background: linear-gradient(to bottom, #468585 0%, #50b498 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.navbar-container button a {
+  color: white;
+  font-size: 16px;
+}
+
+.navbar-container button a:hover {
+  color: white;
+}
+
+.navbar-container button img {
+  width: 20px;
+  height: auto;
+}
+
 .navbar-container a:hover {
   color: var(--secondary-color);
 }
@@ -464,3 +490,5 @@ body::-webkit-scrollbar-thumb:hover {
   width: 190px;
   height: auto;
 }
+/* tips end */
+

@@ -81,3 +81,31 @@ const tipsData = [
         img: './assets/images/home/tips/img6.svg'
     },
 ];
+
+const accordionData = [
+    {
+        id: 1,
+        title: 'Social Gambling vs Professional Gambling',
+        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+    },
+    {
+        id: 2,
+        title: 'Compulsive Gambling',
+        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+    },
+    {
+        id: 3,
+        title: 'Binge Gambling',
+        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+    },
+    {
+        id: 4,
+        title: 'Problem Gambling',
+        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+    },
+    {
+        id: 5,
+        title: 'Impulse-Control Gambling Disorder',
+        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+    },
+];
