@@ -164,20 +164,75 @@ document.addEventListener("DOMContentLoaded", function () {
 // Data Doctor end
 
 // Article Map Start
-const articleContainer = document.querySelector(".article-container");
-articleData.forEach(article => {
-    const articleElement = document.createElement("div");
-    articleElement.classList.add("article-body");
+const articleContainer = document.querySelector(".article-container")
+const prevBtn = document.getElementById("prevBtn")
+const nextBtn = document.getElementById("nextBtn")
+const page1 = document.getElementById("page1")
+const page2 = document.getElementById("page2")
 
+let currentPage = 1
+const itemsPerPage = 6
+
+function renderArticles(page) {
+  articleContainer.innerHTML = ""
+  const start = (page - 1) * itemsPerPage
+  const end = start + itemsPerPage
+  const paginatedArticles = articleData.slice(start, end)
+
+  paginatedArticles.forEach(article => {
+    const articleElement = document.createElement("div")
+    articleElement.classList.add("article-body")
     articleElement.innerHTML = `
-        <img src="${article.img}" alt="Article Image">
-        <h4>${article.date}</h4>
-        <h1>${article.title}</h1>
-        <p>${article.desc}</p>
-    `;
+      <img src="${article.img}" alt="Article Image">
+      <h4>${article.date}</h4>
+      <h1>${article.title}</h1>
+      <p>${article.desc}</p>
+    `
+    articleContainer.appendChild(articleElement)
+  })
 
-    articleContainer.appendChild(articleElement);
-});
+  updatePaginationButtons()
+}
+
+function updatePaginationButtons() {
+  page1.classList.remove("active")
+  page2.classList.remove("active")
+  if (currentPage === 1) {
+    page1.classList.add("active")
+    prevBtn.disabled = true
+    nextBtn.disabled = false
+  } else if (currentPage === 2) {
+    page2.classList.add("active")
+    prevBtn.disabled = false
+    nextBtn.disabled = true
+  }
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--
+    renderArticles(currentPage)
+  }
+})
+
+nextBtn.addEventListener("click", () => {
+  if (currentPage < 2) {
+    currentPage++
+    renderArticles(currentPage)
+  }
+})
+
+page1.addEventListener("click", () => {
+  currentPage = 1
+  renderArticles(currentPage)
+})
+
+page2.addEventListener("click", () => {
+  currentPage = 2
+  renderArticles(currentPage)
+})
+
+renderArticles(currentPage)
 // Article Map End
 
 // Tips Map Start
@@ -200,3 +255,18 @@ tipsData.forEach(tips => {
     tipsContainer.appendChild(tipsElement);
 });
 // Tips Map End
+
+// Report Form Start
+const form = document.getElementById("reportForm");
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const link = document.getElementById("link").value;
+  const info = document.getElementById("info").value;
+  const message = `*REPORT FORM*\nName: ${name}\nEmail: ${email}\nLink: ${link}\nAdditional Info: ${info}`;
+  const phoneNumber = "6281398876687";
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+});
+// Report Form End

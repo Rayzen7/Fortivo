@@ -41,6 +41,48 @@ const articleData = [
         desc: 'Polres Metro Jakarta Utara menangkap empat pelaku yang terlibat dalam operasional situs judi online, termasuk....',
         img: './assets/images/home/article/img6.png'
     },
+    {
+        id: 7,
+        date: '24 Januari, 2025',
+        title: 'PPATK Temukan Perputaran Duit Judi Rp 359 T, Rp 28 T ke Luar RI Lewat Kripto',
+        desc: 'Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK) menemukan perputaran uang terkait judi online mencapai...',
+        img: './assets/images/home/article/img7.png'
+    },
+    {
+        id: 8,
+        date: '17 Februari, 2024',
+        title: 'Bareskrim Sita Rp61 Miliar terkait 3 Situs Judi Online Jaringan Internasional',
+        desc: 'Bareskrim Polri menyita aset senilai Rp61 miliar terkait tiga situs judi online yang terhubung dengan jaringan...',
+        img: './assets/images/home/article/img8.png'
+    },
+    {
+        id: 9,
+        date: '17 Desember, 2024',
+        title: 'Polisi Bongkar Sindikat Judi Online Internasional, Sita Aset Rp61 Miliar',
+        desc: 'Polri mengungkap sindikat judi online internasional dan menyita aset senilai Rp61 miliar....',
+        img: './assets/images/home/article/img9.png'
+    },
+    {
+        id: 10,
+        date: '5 Juli, 2024',
+        title: 'PPATK Temukan Kades Selewengkan Dana Desa buat Judol',
+        desc: 'Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK) menemukan kasus kepala desa yang menyelewengkan...',
+        img: './assets/images/home/article/img10.png'
+    },
+    {
+        id: 11,
+        date: '19 Agustus, 2024',
+        title: 'Polda DIY Ungkap Kasus Judi Dadu Online di Media Sosial, 7 Orang disekap',
+        desc: 'Polda Daerah Istimewa Yogyakarta berhasil mengungkap kasus judi dadu online yang disiarkan melalui media sosial...',
+        img: './assets/images/home/article/img11.png'
+    },
+    {
+        id: 12,
+        date: '15 Januari, 2024',
+        title: 'Bareskrim Tetapkan 2 Tersangka TPPU Judi Online untuk Bangun Hotel',
+        desc: 'Bareskrim Polri menetapkan dua tersangka dalam kasus Tindak Pidana Pencucian Uang (TPPU) terkait judi online....',
+        img: './assets/images/home/article/img12.png'
+    },
 ];
 
 const tipsData = [

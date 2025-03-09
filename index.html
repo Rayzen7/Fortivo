@@ -17,9 +17,9 @@
             <h1><span>For</span>tivo</h1>
         </div>
         <div class="navbar-container">
-            <a href="">Home</a>
-            <a href="">Information</a>
-            <a href="">News</a>
+            <a href="#">Home</a>
+            <a href="#information">Information</a>
+            <a href="#popular-article">News</a>
             <a href="">Report</a>
             <a href="">Tips</a>
             <button>
@@ -63,7 +63,7 @@
     <!-- Welcome End -->
 
     <!-- Gamble Disoders Start -->
-    <section class="gamble">
+    <section class="gamble" id="information">
         <div class="gamble-image">
             <img src="./assets/images/information/person.png" alt="">
         </div>
@@ -208,14 +208,14 @@
      <section class="popular-article" id="popular-article">
         <h1>Popular Articles</h1>
         <div class="popular-article-flex">
-            <div class="popular-article-primary">
+            <a href="https://nasional.kompas.com/read/2025/02/19/05343771/komdigi-blokir-993144-situs-judi-online-dan-187865-konten-pornografi-hingga?utm_source=chatgpt.com" target="_blank" class="popular-article-primary">
                 <img src="./assets/images/home/popular-article/img1.png" alt="" />
                 <p class="popular-date">Sunday, 9th of February, 2024</p>
                 <h1>Komdigi Blokir 993.144 Situs Judi Online hingga Februari 2025</h1>
                 <p>Upaya ini merupakan bagian dari komitmen pemerintah dalam memerangi konten ilegal di dunia maya....</p>
-            </div>
+            </a>
             <div class="popular-article-secondary">
-                <div class="popular-article-container">
+                <a class="popular-article-container" href="https://nasional.kompas.com/read/2024/11/21/15395401/kabareskrim-wahyu-widada-ungkap-619-kasus-judi-online-selama-5-20-november?utm_source=chatgpt.com" target="_blank">
                     <img src="./assets/images/home/popular-article/img2.png" alt="" />
                     <div class="popular-article-container-text">
                         <p class="popular-date">Monday, 3th of December, 2024</p>
@@ -224,8 +224,8 @@
                             Kepala Bareskrim Polri, Komjen Wahyu Widada, mengungkapkan bahwa sejak 5...
                         </p>
                     </div>
-                </div>
-                <div class="popular-article-container">
+                </a>
+                <a href="https://www.kosmo.com.my/2025/02/17/menantu-pura-pura-diragut-selepas-kebas-duit-mentua/?utm_source=chatgpt.com" target="_blank" class="popular-article-container">
                     <img src="./assets/images/home/popular-article/img3.png" alt="" />
                     <div class="popular-article-container-text">
                         <p class="popular-date">Tuesday, 4th of January, 2024</p>
@@ -234,32 +234,43 @@
                             Seorang pria bernama Beny Wijaya di Aceh membuat skenario pembegalan...
                         </p>
                     </div>
-                </div>
-                <div class="popular-article-container">
+                </a>
+                <a href="https://regional.kompas.com/read/2025/01/23/080047478/dana-bos-dipakai-judi-mantan-kepala-sekolah-dihukum-penjara-3-tahun?utm_source=chatgpt.com" target="_blank" class="popular-article-container">
                     <img src="./assets/images/home/popular-article/img4.png" alt="" />
                     <div class="popular-article-container-text">
                         <p class="popular-date">Wenesday, 9th of February, 2024</p>
-                        <h1></h1>Eks Kepsek Korupsi Dana BOS untuk Judi Online</h1>
+                        <h1>Eks Kepsek Korupsi Dana BOS untuk Judi Online</h1>
                         <p>
                             Mantan kepala sekolah dan bendahara SMPN 17 Kota Bengkulu divonis bersalah..
                         </p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
      <!-- Popular Article End -->
 
      <!-- Article Start -->
-      <section class="article">
-        <h1>Latest Articles</h1>
-        <div class="article-container">
-            <!-- Mapping on Javascript -->
+    <section class="article">
+      <h1>Latest Articles</h1>
+      <div class="article-container">
+        <!-- Mapping on javascript -->
+      </div>
+      <div class="article-pagination">
+        <button id="prevBtn">
+          <i class="bx bx-left-arrow-alt"></i>
+          <p>Previous</p>
+        </button>
+        <div class="article-circle">
+          <p id="page1" class="active">1</p>
+          <p id="page2">2</p>
         </div>
-        <div class="article-pagination">
-
-        </div>
-      </section>
+        <button id="nextBtn">
+          <p>Next</p>
+          <i class="bx bx-right-arrow-alt"></i>
+        </button>
+      </div>
+    </section>  
       <!-- Article End -->
 
     <!-- Consul Start -->
@@ -292,6 +303,27 @@
         </div>
      </section>
      <!-- Tips End -->
+
+     <!-- Report Start -->
+      <section class="report">
+        <div class="report-text">
+            <h5>WELCOME TO SAFE INTERNET</h5>
+            <h1>WELCOME TO SAFE INTERNET</h1>
+            <p>A safe internet is our right. If you come across illegal online gambling sites, report them immediately for further action. Let’s work together to maintain a clean and secure digital environment.</p>
+        </div>
+        <div class="report-form">
+            <h1>Report Form</h1>
+            <p>Help us take down illegal gambling sites by filling out the form below</p>
+            <form id="reportForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="link" placeholder="Online Gambling Link" required>
+                <input type="text" id="info" placeholder="Additional Information" required>
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+      </section>
+     <!-- Report End -->
 
      <!-- footer start -->
       <footer class="footer">
