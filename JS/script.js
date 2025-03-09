@@ -270,3 +270,14 @@ form.addEventListener("submit", function(e) {
   window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
 });
 // Report Form End
+
+// Navbar start
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('navbar-list');
+    const navbarContent = document.querySelector('.navbar-container');
+
+    hamburger.addEventListener('click', function() {
+        navbarContent.classList.toggle('active');
+    });
+});
+// Navbar end
