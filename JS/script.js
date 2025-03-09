@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Gambler Data Start
 const dataGambler = {
-    "< 10 Tahun": [30, 60, 20, 5, 10], 
-    "10-20 Tahun": [50, 80, 30, 20, 25], 
-    "21-30 Tahun": [60, 90, 40, 30, 35], 
-    "31-50 Tahun": [70, 100, 50, 40, 45], 
-    "> 50 Tahun": [20, 40, 15, 10, 12]
+    "< 10 Years": [30, 60, 20, 5, 10], 
+    "10-20 Years": [50, 80, 30, 20, 25], 
+    "21-30 Years": [60, 90, 40, 30, 35], 
+    "31-50 Years": [70, 100, 50, 40, 45], 
+    "> 50 Years": [20, 40, 15, 10, 12]
 };
 
 const labels = ["2019", "2020", "2021", "2022", "2023"];
@@ -64,7 +64,7 @@ let gamblerChart = new Chart(ctx, {
         labels: labels,
         datasets: [{
             label: "Persentase Data",
-            data: dataGambler["10-20 Tahun"], 
+            data: dataGambler["10-20 Years"], 
             borderColor: "white",
             backgroundColor: "#468585",
             fill: true,
@@ -94,7 +94,7 @@ let gamblerChart = new Chart(ctx, {
                     },
                     label: function(context) {
                         let ageGroup = document.querySelector(".selected")?.textContent.trim() || "";
-                        return `${ageGroup}\nTahun ${context.label} sebanyak ${context.raw}%`;
+                        return `${ageGroup}\nYears ${context.label} by ${context.raw}%`;
                     }
                 }
             }
@@ -103,7 +103,7 @@ let gamblerChart = new Chart(ctx, {
 });
 
 document.querySelectorAll(".gambler-data-container").forEach(button => {
-    if (button.querySelector("h1").textContent.trim() === "10-20 Tahun") {
+    if (button.querySelector("h1").textContent.trim() === "10-20 Years") {
         button.classList.add("selected");
         button.style.backgroundColor = "#468585";
         button.style.color = "#fff";

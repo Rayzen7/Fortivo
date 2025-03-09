@@ -355,7 +355,7 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: start;
   gap: 60px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .quality-body-left {

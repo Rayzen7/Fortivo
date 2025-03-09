@@ -1,89 +1,89 @@
 const articleData = [
-    {
-        id: 1,
-        date: 'Januari 24, 2025',
-        title: 'Prabowo Perintahkan Perang Lawan Judi Online, Minta Aliran Duit Ditelusuri.',
-        desc: 'Presiden Prabowo Subianto menginstruksikan penindakan tegas terhadap judi online dan meminta penelusuran...',
-        img: './assets/images/home/article/img1.png'
-    },
-    {
-        id: 2,
-        date: 'Februari 17, 2024',
-        title: 'Menkominfo: Indonesia Darurat Judi Perputaran Uang Capai Rp327 Triliun.',
-        desc: 'Menteri Komunikasi dan Informatika menyatakan bahwa Indonesia berada dalam situasi darurat judi online...',
-        img: './assets/images/home/article/img2.png'
-    },
-    {
-        id: 3,
-        date: 'Desember 17, 2024',
-        title: 'Polisi Wanti-wanti Warga Jaksel Tak Tergiur Jual-Beli Rekening Judol.',
-        desc: 'Polisi mengimbau masyarakat, khususnya di Jakarta Selatan, untuk tidak tergiur dengan tawaran jual-beli...',
-        img: './assets/images/home/article/img3.png'
-    },
-    {
-        id: 4,
-        date: 'Juli 5, 2024',
-        title: 'Ganjaran Bui untuk Eks Kepsek Korupsi Dana BOS untuk Judi Online.',
-        desc: 'Mantan kepala sekolah dan bendahara SMPN 17 Kota Bengkulu terbukti bersalah dalam kasus korupsi Dana...',
-        img: './assets/images/home/article/img4.png'
-    },
-    {
-        id: 5,
-        date: 'Agustus 19, 2024',
-        title: 'Menkominfo: Indonesia Darurat Judi Perputaran Uang Capai Rp327 Triliun.',
-        desc: 'Menteri Komunikasi dan Informatika menyatakan bahwa Indonesia berada dalam situasi darurat judi online...',
-        img: './assets/images/home/article/img5.png'
-    },
-    {
-        id: 6,
-        date: 'Maret 15, 2024',
-        title: 'Polisi Tangkap Broadcaster hingga Pemilik Website Judol di Cilincing.',
-        desc: 'Polres Metro Jakarta Utara menangkap empat pelaku yang terlibat dalam operasional situs judi online, termasuk....',
-        img: './assets/images/home/article/img6.png'
-    },
-    {
-        id: 7,
-        date: '24 Januari, 2025',
-        title: 'PPATK Temukan Perputaran Duit Judi Rp 359 T, Rp 28 T ke Luar RI Lewat Kripto',
-        desc: 'Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK) menemukan perputaran uang terkait judi online mencapai...',
-        img: './assets/images/home/article/img7.png'
-    },
-    {
-        id: 8,
-        date: '17 Februari, 2024',
-        title: 'Bareskrim Sita Rp61 Miliar terkait 3 Situs Judi Online Jaringan Internasional',
-        desc: 'Bareskrim Polri menyita aset senilai Rp61 miliar terkait tiga situs judi online yang terhubung dengan jaringan...',
-        img: './assets/images/home/article/img8.png'
-    },
-    {
-        id: 9,
-        date: '17 Desember, 2024',
-        title: 'Polisi Bongkar Sindikat Judi Online Internasional, Sita Aset Rp61 Miliar',
-        desc: 'Polri mengungkap sindikat judi online internasional dan menyita aset senilai Rp61 miliar....',
-        img: './assets/images/home/article/img9.png'
-    },
-    {
-        id: 10,
-        date: '5 Juli, 2024',
-        title: 'PPATK Temukan Kades Selewengkan Dana Desa buat Judol',
-        desc: 'Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK) menemukan kasus kepala desa yang menyelewengkan...',
-        img: './assets/images/home/article/img10.png'
-    },
-    {
-        id: 11,
-        date: '19 Agustus, 2024',
-        title: 'Polda DIY Ungkap Kasus Judi Dadu Online di Media Sosial, 7 Orang disekap',
-        desc: 'Polda Daerah Istimewa Yogyakarta berhasil mengungkap kasus judi dadu online yang disiarkan melalui media sosial...',
-        img: './assets/images/home/article/img11.png'
-    },
-    {
-        id: 12,
-        date: '15 Januari, 2024',
-        title: 'Bareskrim Tetapkan 2 Tersangka TPPU Judi Online untuk Bangun Hotel',
-        desc: 'Bareskrim Polri menetapkan dua tersangka dalam kasus Tindak Pidana Pencucian Uang (TPPU) terkait judi online....',
-        img: './assets/images/home/article/img12.png'
-    },
-];
+  {
+    id: 1,
+    date: 'January 24, 2025',
+    title: 'Prabowo Orders War Against Online Gambling, Demands Fund Flow Investigation.',
+    desc: 'President Prabowo Subianto instructed firm action against online gambling and requested further investigation...',
+    img: './assets/images/home/article/img1.png'
+  },
+  {
+    id: 2,
+    date: 'February 17, 2024',
+    title: 'Minister of Communications: Indonesia in Online Gambling Emergency, Money Circulation Reaches IDR 327 Trillion.',
+    desc: 'The Minister of Communications and Informatics stated that Indonesia is in an online gambling emergency situation...',
+    img: './assets/images/home/article/img2.png'
+  },
+  {
+    id: 3,
+    date: 'December 17, 2024',
+    title: 'Police Warn South Jakarta Residents Not to Be Tempted by Online Gambling Account Sales.',
+    desc: 'Police urged the public, especially in South Jakarta, not to be tempted by the offer of buying and selling bank accounts...',
+    img: './assets/images/home/article/img3.png'
+  },
+  {
+    id: 4,
+    date: 'July 5, 2024',
+    title: 'Prison Sentence for Ex-Principal Who Embezzled BOS Funds for Online Gambling.',
+    desc: 'A former school principal and treasurer of SMPN 17 Bengkulu City were found guilty in a corruption case involving BOS funds...',
+    img: './assets/images/home/article/img4.png'
+  },
+  {
+    id: 5,
+    date: 'August 19, 2024',
+    title: 'Minister of Communications: Indonesia in Online Gambling Emergency, Money Circulation Reaches IDR 327 Trillion.',
+    desc: 'The Minister of Communications and Informatics stated that Indonesia is in an online gambling emergency situation...',
+    img: './assets/images/home/article/img5.png'
+  },
+  {
+    id: 6,
+    date: 'March 15, 2024',
+    title: 'Police Arrest Broadcasters and Website Owners of Online Gambling in Cilincing.',
+    desc: 'North Jakarta Metro Police arrested four perpetrators involved in operating online gambling websites, including...',
+    img: './assets/images/home/article/img6.png'
+  },
+  {
+    id: 7,
+    date: 'January 24, 2025',
+    title: 'PPATK Finds Gambling Transactions Reaching IDR 359 Trillion, IDR 28 Trillion Sent Abroad via Crypto.',
+    desc: 'The Financial Transaction Reports and Analysis Center (PPATK) found online gambling-related money circulation reaching...',
+    img: './assets/images/home/article/img7.png'
+  },
+  {
+    id: 8,
+    date: 'February 17, 2024',
+    title: 'Bareskrim Seizes IDR 61 Billion from 3 International Online Gambling Sites.',
+    desc: 'The Criminal Investigation Agency (Bareskrim) seized assets worth IDR 61 billion linked to three international online gambling sites...',
+    img: './assets/images/home/article/img8.png'
+  },
+  {
+    id: 9,
+    date: 'December 17, 2024',
+    title: 'Police Uncover International Online Gambling Syndicate, Seize IDR 61 Billion Assets.',
+    desc: 'The Indonesian police exposed an international online gambling syndicate and seized assets worth IDR 61 billion...',
+    img: './assets/images/home/article/img9.png'
+  },
+  {
+    id: 10,
+    date: 'July 5, 2024',
+    title: 'PPATK Finds Village Head Embezzled Village Funds for Online Gambling.',
+    desc: 'The Financial Transaction Reports and Analysis Center (PPATK) discovered a case where a village head misused village funds...',
+    img: './assets/images/home/article/img10.png'
+  },
+  {
+    id: 11,
+    date: 'August 19, 2024',
+    title: 'Yogyakarta Police Uncover Online Dice Gambling on Social Media, 7 People Held Captive.',
+    desc: 'The Yogyakarta Regional Police successfully uncovered an online dice gambling case broadcast on social media...',
+    img: './assets/images/home/article/img11.png'
+  },
+  {
+    id: 12,
+    date: 'January 15, 2024',
+    title: 'Bareskrim Names 2 Suspects in Online Gambling Money Laundering to Build Hotel.',
+    desc: 'The Criminal Investigation Agency (Bareskrim) named two suspects in a money laundering case related to online gambling...',
+    img: './assets/images/home/article/img12.png'
+  }
+];  
 
 const tipsData = [
     {
