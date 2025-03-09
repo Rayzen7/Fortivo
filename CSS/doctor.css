@@ -1,0 +1,272 @@
+:root {
+  --poppins-semibold: poppins-semibold;
+  --poppins-bold: poppins-bold;
+  --poppins-medium: poppins-medium;
+  --poppins-regular: poppins-regular;
+  --poppins-thin: poppins-thin;
+  --primary-color: #50B498;
+  --tertiary-color: #468585;
+  --black-color: #212121;
+  --gray-color: #B1B1B1;
+}
+
+@font-face {
+  font-family: poppins-semibold;
+  src: url("../assets/fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: poppins-thin;
+  src: url("../assets/fonts/Poppins-Thin.ttf");
+}
+
+@font-face {
+  font-family: poppins-bold;
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: poppins-medium;
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: poppins-regular;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #F5F5F7;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; 
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); 
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #3b9b80;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  75% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* navbar start */
+.navbar {
+    width: auto;
+    height: 12vh;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-container {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--poppins-semibold);
+}
+
+.navbar-container i {
+    font-size: 32px;
+}
+
+.navbar-container p {
+    font-size: 20px;
+}
+/* navbar end */
+
+/* doctor start */
+.doctor {
+    width: auto;
+    min-height: 100vh;
+    padding: 0 30px;
+    padding-bottom: 70px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.glow {
+    position: absolute;
+    top: -10%;
+    width: 80%;
+    height: auto;
+}
+
+.doctor-input {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 0 24px;
+    align-items: center;
+    background-color: white;
+    width: 600px;
+    border-radius: 10px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.doctor-input i {
+    font-size: 20px;
+}
+
+.doctor-input input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: var(--poppins-medium);
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    z-index: 10px;
+}
+
+.doctor-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+    margin-top: 70px;
+    position: relative;
+    flex-wrap: wrap;
+    z-index: 30px;
+}
+
+.doctor-content {
+    background-color: white;
+    width: 300px;
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.doctor-content img {
+    border-radius: 8px;
+    position: relative;
+    height: auto;
+    width: 260px;
+    top: 0;
+}
+
+.doctor-content h1 {
+    font-family: var(--poppins-semibold);
+    font-size: 22px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.doctor-content p {
+    font-family: var(--poppins-medium);
+    font-size: 12px;
+    text-align: justify;
+}
+
+.doctor-content a {
+    text-decoration: none;    
+    cursor: pointer;
+}
+
+.doctor-content a button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 40px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all ease-in-out 0.2s;
+}
+
+.doctor-content a button i {
+    font-size: 22px;
+}
+
+.doctor-content a button p {
+    font-size: 14px;
+}
+
+.doctor-content a button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+#no-doctor {
+    font-family: var(--poppins-medium);
+    text-align: center;
+    font-size: 18px;
+    display: none;
+    margin-top: 40px;
+}
+/* doctor end */
+
+/* Handphone Responsive */
+@media (min-width: 320px) and (max-width: 767px) {
+    .navbar {
+        padding: 0 24px;
+        position: relative;
+        z-index: 90px;
+    }
+
+    .navbar-container {
+        position: relative;
+        z-index: 50px;
+    }
+
+    .doctor-input {
+        width: auto;
+        margin-top: -20px;
+    }
+
+    .glow {
+        display: none;
+    }
+}

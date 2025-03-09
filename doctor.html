@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortivo</title>
+    <link rel="icon" href="./assets/images/logo/logo.svg">
+    <link rel="stylesheet" href="./CSS/doctor.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- navbar start -->
+     <nav class="navbar">
+        <a href="./index.html" class="navbar-container">
+            <i class="bx bx-chevron-left"></i>
+            <p>Back</p>
+        </a>
+     </nav>
+    <!-- navbar end -->
+
+    <!-- doctor start -->
+     <section class="doctor">
+        <img class="glow" src="./assets/images/doctor/glow.svg" alt="">
+        <div class="doctor-input">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search for Doctors">
+        </div>
+        <div class="doctor-container">
+            <div class="doctor-content">
+                <img src="./assets/images/doctor/img1.png" alt="">
+                <h1>Tachi Risa M.Psi</h1>
+                <p>dr. Risa is a top specialist at The Royal London Hospital at London. She is available for private consultation. </p>
+                <a href="https://wa.me/6285695726932" target="_blank">
+                    <button>
+                        <i class="bx bxl-whatsapp"></i>
+                        <p>Book an Appoinment</p>
+                    </button>
+                </a>
+            </div>
+            <div class="doctor-content">
+                <img src="./assets/images/doctor/img2.png" alt="">
+                <h1>Syifa Maulida S.Psi</h1>
+                <p>dr. Syifa Maulida is a top specialist at London Bridge Hospital at London. She is available for private consultation. </p>
+                <a href="https://wa.me/6281398876687" target="_blank">
+                    <button>
+                        <i class="bx bxl-whatsapp"></i>
+                        <p>Book an Appoinment</p>
+                    </button>
+                </a>
+            </div>
+            <div class="doctor-content">
+                <img src="./assets/images/doctor/img3.png" alt="">
+                <h1>Nadine Alena M.Psi</h1>
+                <p>dr. Nadine Alena M.Psi is a top specialist at London Bridge Hospital at London. She is available for private consultation. </p>
+                <a href="https://wa.me/62895704440602" target="_blank">
+                    <button>
+                        <i class="bx bxl-whatsapp"></i>
+                        <p>Book an Appoinment</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <p id="no-doctor">Doctor not found</p>
+     </section>
+    <!-- doctor end -->
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./JS/doctor.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
