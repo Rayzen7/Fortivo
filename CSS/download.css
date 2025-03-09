@@ -131,7 +131,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .navbar-container a {
-  color: var(--gray-color);
+  color: black;
   font-size: 18px;
   cursor: pointer;
   text-decoration: none;
@@ -167,6 +167,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .navbar-container a:hover {
   color: var(--primary-color);
+}
+
+.navbar i {
+  display: none;
 }
 /* Navbar End */
 
@@ -744,3 +748,246 @@ body::-webkit-scrollbar-thumb:hover {
   color: #737373;
 }
 /* footer end */
+
+/* Handphone Responsive */
+@media (min-width: 320px) and (max-width: 767px) {
+   /* navbar start */
+  .navbar {
+    padding: 0 30px;
+    height: 10vh;
+  }
+
+  .navbar i {
+    display: block;
+    position: relative;
+    z-index: 80px;
+    font-size: 30px;
+  }
+
+  .navbar-logo img {
+    width: 30px;
+    height: auto;
+  }
+
+  .navbar-logo h1 {
+    font-size: 20px;
+  }
+
+  .navbar-container {
+    position: absolute;
+    flex-direction: column;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    transition: all ease-in-out 0.8s;
+    background-color: white;
+    width: 200px;
+    gap: 36px;
+    align-items: start;
+    padding: 0 50px;
+  }
+
+  .navbar-container.active {
+    right: 0;
+  }
+
+  .navbar-container a {
+    font-size: 16px;
+  }
+
+  .navbar-container button a {
+    font-size: 14px;
+  }
+  /* navbar end */
+
+  /* home start */
+  .section-home {
+    flex-direction: column;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  .section-home img {
+    display: none;
+  }
+
+  .text-home h1 {
+    width: auto;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .text-home p {
+    width: auto;
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  .text-home h2 {
+    width: auto;
+    font-size: 14px;
+  }
+
+  .text-home a {
+    width: auto;
+    font-size: 14px;
+  }
+  /* home end */
+
+  /* features start */
+  .section-features {
+    margin-top: -60px;
+    padding: 0 30px;
+    padding-bottom: 100px;
+  }
+
+  .features-title {
+    width: auto;
+    justify-content: center;
+  }
+
+  .features-container {
+    width: auto;
+  }
+
+  .features-container h1 {
+    font-size: 24px;
+  }
+
+  .features-container p {
+    width: auto;
+    margin-top: 14px;
+    font-size: 14px;
+  }
+  /* features end */
+
+  /* Quality Guaranteed Start */
+  .quality {
+    padding: 0 30px;
+    padding-bottom: 100px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .quality-title {
+    width: auto;
+  }
+
+  .quality-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quality-body-left h1 {
+    width: auto;
+    font-size: 24px;
+  }
+
+  .quality-body-left p {
+    width: auto;
+    font-size: 14px;
+  }
+
+  .quality-progress {
+    width: 280px;
+  }
+
+  .quality-progress-text h1 {
+    font-size: 16px;
+  }
+
+  .quality-progress-text p {
+    font-size: 14px;
+  }
+
+  .quality-progress-bar,
+  .quality-progress-bar-success {
+    height: 10px;
+  }
+
+  .quality-body-left button {
+    width: 140px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .quality-body-right-top h1 {
+    width: auto;
+    font-size: 16px;
+  }
+
+  .quality-body-right-top p {
+    width: auto;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .quality-body-right-bottom {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 40px;
+  }
+
+  .quality-body-right-bottom-container {
+    width: auto;
+  }
+
+  .quality-body-right-bottom-container h1 {
+    font-size: 16px;
+    width: auto;
+  }
+
+  .quality-body-right-bottom-container p {
+    width: auto;
+    font-size: 14px;
+    text-align: justify;
+  }
+  /* Quality Guaranteed End */
+
+  /* footer start */
+  .footer {
+    min-height: 100vh;
+    height: auto;
+    padding: 60px 30px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+  }
+
+  .footer-head-logo img {
+    width: 160px;
+  }
+
+  .footer-head-logo p {
+    font-size: 16px;
+  }
+
+  .footer-head-about h1 {
+    font-size: 24px;
+  }
+
+  .footer-head-about p {
+    width: auto;
+    font-size: 14px;
+  }
+
+  .footer-center {
+    display: none;
+  }
+
+  .footer-bottom-line,
+  .footer-bottom-download {
+    display: none;
+  }
+
+  .footer-bottom-container {
+    text-align: center;
+  }
+  /* footer end */
+}
