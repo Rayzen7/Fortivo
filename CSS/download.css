@@ -6,7 +6,7 @@
   --poppins-thin: poppins-thin;
   --primary-color: #50B498;
   --tertiary-color: #468585;
-  --secondary-color: #107E2F;
+  --primary-color: #107E2F;
   --black-color: #212121;
   --gray-color: #B1B1B1;
 }
@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .navbar-logo span {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .navbar-logo img {
@@ -167,7 +167,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .navbar-container a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 /* Navbar End */
 

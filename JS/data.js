@@ -91,21 +91,21 @@ const accordionData = [
     {
         id: 2,
         title: 'Compulsive Gambling',
-        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+        desc: 'An uncontrollable urge to keep gambling, even when it leads to financial ruin, strained relationships, or mental health issues. Often linked to impulsivity and the inability to resist betting.',
     },
     {
         id: 3,
         title: 'Binge Gambling',
-        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+        desc: 'Similar to compulsive gambling but occurs in episodes rather than continuously. The person might go weeks or months without gambling, but when they start, they lose control.',
     },
     {
         id: 4,
         title: 'Problem Gambling',
-        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+        desc: "A milder form of gambling disorder that still causes negative consequences in one's life. Individuals may gamble frequently or occasionally but struggle with financial or emotional harm.",
     },
     {
         id: 5,
         title: 'Impulse-Control Gambling Disorder',
-        desc: 'Social Gambling: Casual gambling for entertainment without addiction or harmful consequences. Professional Gambling: Some people gamble as a career with strict financial discipline, but they are at risk of developing an addiction.',
+        desc: 'A type of gambling disorder where a person has an intense urge to gamble and struggles with self-control. Often linked to other impulse-control disorders, such as kleptomania or compulsive buying',
     },
 ];
