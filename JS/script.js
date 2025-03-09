@@ -64,7 +64,7 @@ let gamblerChart = new Chart(ctx, {
         labels: labels,
         datasets: [{
             label: "Persentase Data",
-            data: [0, 0, 0, 0, 0], 
+            data: dataGambler["10-20 Tahun"], 
             borderColor: "white",
             backgroundColor: "#468585",
             fill: true,
@@ -103,11 +103,19 @@ let gamblerChart = new Chart(ctx, {
 });
 
 document.querySelectorAll(".gambler-data-container").forEach(button => {
+    if (button.querySelector("h1").textContent.trim() === "10-20 Tahun") {
+        button.classList.add("selected");
+        button.style.backgroundColor = "#468585";
+        button.style.color = "#fff";
+        button.style.border = "2px solid white";
+    }
+
     button.addEventListener("click", function() {
         document.querySelectorAll(".gambler-data-container").forEach(btn => {
             btn.classList.remove("selected");
             btn.style.backgroundColor = "";
             btn.style.border = "";
+            btn.style.color = "";
         });
         this.classList.add("selected");
         this.style.backgroundColor = "#468585";
@@ -119,14 +127,15 @@ document.querySelectorAll(".gambler-data-container").forEach(button => {
         }
     });
 });
-
 // Gambler Data End
 
 // Data Doctor start
 document.addEventListener("DOMContentLoaded", function () {
-    function counterAnimation(element, target, duration) {
+    function counterAnimation(element, target) {
         let start = 0;
+        let duration = target * 20; 
         let stepTime = Math.abs(Math.floor(duration / target));
+
         let timer = setInterval(() => {
             start += Math.ceil(target / 100);
             if (start >= target) {
@@ -144,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     el.classList.add("animated");
                     let targetNumber = parseInt(el.innerText.replace(",", ""));
                     el.innerText = "0";
-                    counterAnimation(el, targetNumber, 30000);
+                    counterAnimation(el, targetNumber);
                 }
             });
         }
