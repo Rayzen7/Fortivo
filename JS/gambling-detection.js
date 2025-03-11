@@ -36,7 +36,6 @@ async function analyzeText() {
       redirectDetected = true;
     }
 
-    // Suspicious links detection
     const aHrefRegex = /<a[^>]*href=["']([^"']+)["']/g;
     let match;
     while ((match = aHrefRegex.exec(text)) !== null) {
@@ -68,7 +67,7 @@ async function analyzeText() {
     let html = "";
 
     if (totalIndicators > 0 || redirectDetected) {
-      html += `<p style="color:red"><strong>⚠️ Gambling content detected</strong></p>`;
+      html += `<p style="color:orange"><strong>⚠️ Suspicious indicators found (not necessarily gambling)</strong></p>`;
       html += `<table style="width:100%; border-collapse: collapse; margin-top: 10px">
         <thead>
           <tr style="background-color:#f2f2f2">
@@ -79,67 +78,57 @@ async function analyzeText() {
         <tbody>`;
 
       if (foundKeywords.length > 0) {
-        html += `
-          <tr>
-            <td style="padding:8px; border:1px solid #ccc">Content Keywords</td>
-            <td style="padding:8px; border:1px solid #ccc">${foundKeywords.join(", ")}</td>
-          </tr>`;
+        html += `<tr>
+          <td style="padding:8px; border:1px solid #ccc">Content Keywords</td>
+          <td style="padding:8px; border:1px solid #ccc">${foundKeywords.join(", ")}</td>
+        </tr>`;
       }
 
       if (foundUrlKeywords.length > 0) {
-        html += `
-          <tr>
-            <td style="padding:8px; border:1px solid #ccc">URL Keywords</td>
-            <td style="padding:8px; border:1px solid #ccc">${foundUrlKeywords.join(", ")}</td>
-          </tr>`;
+        html += `<tr>
+          <td style="padding:8px; border:1px solid #ccc">URL Keywords</td>
+          <td style="padding:8px; border:1px solid #ccc">${foundUrlKeywords.join(", ")}</td>
+        </tr>`;
       }
 
       if (suspiciousLinks.length > 0) {
-        html += `
-          <tr>
-            <td style="padding:8px; border:1px solid #ccc">Suspicious Links</td>
-            <td style="padding:8px; border:1px solid #ccc">
-              <ul style="padding-left: 16px; margin:0">${suspiciousLinks.map(link => `<li>${link}</li>`).join("")}</ul>
-            </td>
-          </tr>`;
+        html += `<tr>
+          <td style="padding:8px; border:1px solid #ccc">Suspicious Links</td>
+          <td style="padding:8px; border:1px solid #ccc">
+            <ul style="padding-left: 16px; margin:0">${suspiciousLinks.map(link => `<li>${link}</li>`).join("")}</ul>
+          </td>
+        </tr>`;
       }
 
       if (suspiciousScripts.length > 0) {
-        html += `
-          <tr>
-            <td style="padding:8px; border:1px solid #ccc">Suspicious Scripts</td>
-            <td style="padding:8px; border:1px solid #ccc">
-              <ul style="padding-left: 16px; margin:0">${suspiciousScripts.map(script => `<li>${script}</li>`).join("")}</ul>
-            </td>
-          </tr>`;
+        html += `<tr>
+          <td style="padding:8px; border:1px solid #ccc">Suspicious Scripts</td>
+          <td style="padding:8px; border:1px solid #ccc">
+            <ul style="padding-left: 16px; margin:0">${suspiciousScripts.map(script => `<li>${script}</li>`).join("")}</ul>
+          </td>
+        </tr>`;
       }
 
       if (redirectDetected) {
-        html += `
-          <tr>
-            <td style="padding:8px; border:1px solid #ccc">Redirect/Iframe Detected</td>
-            <td style="padding:8px; border:1px solid #ccc">Yes - suspicious redirect elements found</td>
-          </tr>`;
+        html += `<tr>
+          <td style="padding:8px; border:1px solid #ccc">Suspicious Redirect Detected</td>
+          <td style="padding:8px; border:1px solid #ccc">Yes</td>
+        </tr>`;
       }
 
-      html += `
-        <tr>
-          <td style="padding:8px; border:1px solid #ccc"><strong>Total Indicators</strong></td>
-          <td style="padding:8px; border:1px solid #ccc"><strong>${totalIndicators + (redirectDetected ? 1 : 0)}</strong></td>
-        </tr>
-        </tbody>
-      </table>`;
+      html += `<tr>
+        <td style="padding:8px; border:1px solid #ccc"><strong>Total Indicators</strong></td>
+        <td style="padding:8px; border:1px solid #ccc"><strong>${totalIndicators + (redirectDetected ? 1 : 0)}</strong></td>
+      </tr></tbody></table>`;
     } else {
-      html = `<p style="color:green"><strong>✅ No gambling content detected.</strong></p>`;
+      html = `<p style="color:green"><strong>✅ No suspicious content detected.</strong></p>`;
     }
 
     resultDiv.innerHTML = html;
 
   } catch (err) {
-    resultDiv.innerHTML = `
-      <p style='color:red'>❌ Failed to fetch content from the URL. The website may block scraping.</p>
-      <p><strong>Solution:</strong> Copy the HTML manually and analyze instead.</p>`;
-    console.error(err);
+    resultDiv.innerHTML = `<p style='color:red'>❌ Failed to fetch content from the URL. The website may block scraping.</p>
+    <p><strong>Solution:</strong> Copy the HTML manually and analyze instead.</p>`;
   }
 }
 
