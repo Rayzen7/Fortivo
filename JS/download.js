@@ -25,3 +25,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Navbar end
+
+// Fly button start
+document.addEventListener('DOMContentLoaded', function () {
+    const btnPlus = document.getElementById('fly-btn-plus');
+    const flyBtnContent = document.querySelector('.fly-btn-content');
+    const flyBtnStack = document.querySelector('.image-stack');
+
+    const iconOpen = './assets/images/gambling-test/fly-btn.svg';
+    const iconClose = './assets/images/gambling-test/fly-btn-close.svg';
+
+    btnPlus.addEventListener('click', function () {
+        flyBtnStack.classList.toggle('active');
+        flyBtnContent.classList.toggle('active');
+        
+        if (flyBtnStack.classList.contains('active')) {
+            btnPlus.src = iconClose;
+        } else {
+            btnPlus.src = iconOpen;
+        }
+    });
+});
+// Fly button end

@@ -106,7 +106,7 @@ const tipsData = [
     },
     {
         id: 4,
-        title: 'Manage Finances Wisely',
+        title: 'Manage Finances',
         desc: 'Gambling often makes someone lose money without realizing it. Therefore, it is important to manage finances wisely. Create a strict spending budget and keep your money in an account that is difficult to access for impulsive transactions.',
         img: './assets/images/home/tips/img4.svg'
     },

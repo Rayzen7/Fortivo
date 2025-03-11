@@ -64,7 +64,7 @@ let gamblerChart = new Chart(ctx, {
         labels: labels,
         datasets: [{
             label: "Persentase Data",
-            data: dataGambler["10-20 Years"], 
+            data: dataGambler["< 10 Years"], 
             borderColor: "white",
             backgroundColor: "#468585",
             fill: true,
@@ -103,7 +103,7 @@ let gamblerChart = new Chart(ctx, {
 });
 
 document.querySelectorAll(".gambler-data-container").forEach(button => {
-    if (button.querySelector("h1").textContent.trim() === "10-20 Years") {
+    if (button.querySelector("h1").textContent.trim() === "< 10 Years") {
         button.classList.add("selected");
         button.style.backgroundColor = "#468585";
         button.style.color = "#fff";
@@ -281,3 +281,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Navbar end
+
+// Fly button start
+document.addEventListener('DOMContentLoaded', function () {
+    const btnPlus = document.getElementById('fly-btn-plus');
+    const flyBtnContent = document.querySelector('.fly-btn-content');
+    const flyBtnStack = document.querySelector('.image-stack');
+
+    const iconOpen = './assets/images/gambling-test/fly-btn.svg';
+    const iconClose = './assets/images/gambling-test/fly-btn-close.svg';
+
+    btnPlus.addEventListener('click', function () {
+        flyBtnStack.classList.toggle('active');
+        flyBtnContent.classList.toggle('active');
+        
+        if (flyBtnStack.classList.contains('active')) {
+            btnPlus.src = iconClose;
+        } else {
+            btnPlus.src = iconOpen;
+        }
+    });
+});
+// Fly button end
+
+// splash start
+const splashScreen = document.getElementById("splash-screen");
+const mainContent = document.getElementById("main-content");
+const splashVideo = document.getElementById("splashVideo");
+
+splashVideo.onended = function () {
+  splashScreen.style.height = "0";
+  splashScreen.style.opacity = "0";
+  setTimeout(() => {
+    splashScreen.style.display = "none";
+    mainContent.style.display = "block";
+  }, 1600);
+};
+// splash end

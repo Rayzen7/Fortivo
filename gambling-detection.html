@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortivo</title>
+  <link rel="icon" href="./assets/images/logo/logo.svg">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="boxicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="./CSS/gambling-detection.css">
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar">
+    <a href="./index.html" class="navbar-container">
+        <i class="bx bx-chevron-left"></i>
+        <p>Back</p>
+    </a>
+   </nav>
+  <!-- navbar end -->
+
+  <!-- Test Start -->
+  <section class="test">
+    <div class="container">
+      <h1>Gambling Content Detection</h1>
+      <p>Investigate & report the website you want to check:</p>
+      <textarea id="inputText" placeholder="Paste Link Here..."></textarea>
+      <button onclick="analyzeText()">Analyze Now</button>
+      <div id="resultArea" class="result"></div>
+    </div>
+  </section>
+  <!-- Test End -->
+  <script src="./JS/gamblingKeywords.js"></script>
+  <script src="./JS/gambling-detection.js"></script>
+</body>
+</html>

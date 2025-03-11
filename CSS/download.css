@@ -112,6 +112,10 @@ body::-webkit-scrollbar-thumb:hover {
   gap: 8px;
 }
 
+.navbar i {
+  display: none;
+}
+
 .navbar-logo h1 {
   font-family: var(--poppins-semibold);
   font-size: 24px;
@@ -149,8 +153,10 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all ease-in-out 0.3s;
   gap: 10px;
   padding: 10px;
+  cursor: pointer;
   border-radius: 8px;
 }
 
@@ -159,23 +165,96 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 16px;
 }
 
-.navbar-container button a:hover {
-  color: white;
+.navbar-container button:hover a {
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
-.navbar-container button img {
-  width: 20px;
-  height: auto;
+.navbar-container button:hover {
+  background: transparent;  
+  border: 2px solid var(--primary-color);
 }
 
 .navbar-container a:hover {
   color: var(--primary-color);
 }
-
-.navbar i {
-  display: none;
-}
 /* Navbar End */
+
+/* Fly btn start */
+.fly-btn {
+  position: fixed;
+  bottom: 60px; 
+  right: 20px; 
+  z-index: 999; 
+}
+
+.fly-btn-container {
+  display: flex;
+  justify-content: end;
+  gap: 0px;
+}
+
+.fly-btn-content {
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: center;
+  width: fit-content;
+  transition: all ease-in-out 0.3s;
+  height: fit-content;
+}
+
+.image-stack {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.fly-btn img {
+  width: 70px;
+  cursor: pointer;
+  height: auto;
+  transition: all ease-in-out 0.3s;
+}
+
+.image-stack a img {
+  width: 70px;
+  cursor: pointer;
+  height: auto;
+  opacity: 0;  
+  transform: translateX(30px);
+  position: absolute;
+  top: 0;
+  left: -30px;
+  z-index: -1;
+  transition: opacity 0.8s ease, transform 0.4s ease;
+}
+
+.image-stack.active a:nth-child(1) img,
+.image-stack.active a:nth-child(2) img {
+  opacity: 1; 
+  left: 0; 
+  transform: translateX(0);
+}
+
+.fly-btn img:hover {
+  scale: 1.1;
+}
+
+.image-stack.active a img {
+  position: relative;
+}
+
+.image-stack.active {
+  gap: 20px;
+}
+
+.fly-btn-content.active {
+  width: auto;
+  height: auto;
+  margin-right: 20px;
+}
+/* Fly btn end */
 
 /* Home Start */
 .section-home {
@@ -802,6 +881,18 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 14px;
   }
   /* navbar end */
+  
+  /* fly btn start */
+  .fly-btn img,
+  .image-stack a img {
+    width: 50px;
+  }
+
+  .fly-btn {
+    bottom: 40px;
+    right: 30px;
+  }
+  /* fly btn end */
 
   /* home start */
   .section-home {
