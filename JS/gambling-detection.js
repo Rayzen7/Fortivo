@@ -17,7 +17,6 @@ async function analyzeText() {
 
     let foundKeywords = [];
     let foundUrlKeywords = [];
-    let redirectDetected = false;
     let suspiciousLinks = [];
     let suspiciousScripts = [];
 
@@ -25,16 +24,6 @@ async function analyzeText() {
       if (text.includes(keyword.toLowerCase())) foundKeywords.push(keyword);
       if (url.toLowerCase().includes(keyword.toLowerCase())) foundUrlKeywords.push(keyword);
     });
-
-    if (
-      text.includes('<meta http-equiv="refresh"') ||
-      text.includes("window.location.href") ||
-      text.includes("location.replace") ||
-      text.includes("location.assign") ||
-      text.includes("<iframe src=")
-    ) {
-      redirectDetected = true;
-    }
 
     const aHrefRegex = /<a[^>]*href=["']([^"']+)["']/g;
     let match;
@@ -66,8 +55,8 @@ async function analyzeText() {
 
     let html = "";
 
-    if (totalIndicators > 0 || redirectDetected) {
-      html += `<p style="color:orange"><strong>⚠️ Suspicious indicators found (not necessarily gambling)</strong></p>`;
+    if (totalIndicators > 0) {
+      html += `<p style="color:red"><strong>⚠️ Gambling Detected</strong></p>`;
       html += `<table style="width:100%; border-collapse: collapse; margin-top: 10px">
         <thead>
           <tr style="background-color:#f2f2f2">
@@ -109,26 +98,19 @@ async function analyzeText() {
         </tr>`;
       }
 
-      if (redirectDetected) {
-        html += `<tr>
-          <td style="padding:8px; border:1px solid #ccc">Suspicious Redirect Detected</td>
-          <td style="padding:8px; border:1px solid #ccc">Yes</td>
-        </tr>`;
-      }
-
       html += `<tr>
         <td style="padding:8px; border:1px solid #ccc"><strong>Total Indicators</strong></td>
-        <td style="padding:8px; border:1px solid #ccc"><strong>${totalIndicators + (redirectDetected ? 1 : 0)}</strong></td>
+        <td style="padding:8px; border:1px solid #ccc"><strong>${totalIndicators}</strong></td>
       </tr></tbody></table>`;
     } else {
-      html = `<p style="color:green"><strong>✅ No suspicious content detected.</strong></p>`;
+      html = `<p style="color:green"><strong>✅ No gambling content detected</strong></p>`;
     }
 
     resultDiv.innerHTML = html;
 
   } catch (err) {
     resultDiv.innerHTML = `<p style='color:red'>❌ Failed to fetch content from the URL. The website may block scraping.</p>
-    <p><strong>Solution:</strong> Copy the HTML manually and analyze instead.</p>`;
+    <p><strong>Suggestion:</strong> You can manually copy the HTML and analyze it.</p>`;
   }
 }
 
