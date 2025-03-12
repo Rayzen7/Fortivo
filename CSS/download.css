@@ -263,7 +263,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px 0 20px;
+    gap: 160px;
     padding-top: 90px;
     margin-bottom: 120px;
 }
@@ -323,7 +323,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .section-home img {
-    width: 800px;
+    width: 570px;
     height: auto;
     margin-left: -100px;
     animation: bounce 14s ease-in-out infinite;
@@ -899,6 +899,7 @@ body::-webkit-scrollbar-thumb:hover {
     flex-direction: column;
     margin: 0;
     padding: 0 30px;
+    gap: 0;
   }
 
   .section-home img {
