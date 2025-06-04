@@ -116,16 +116,10 @@ async function analyzeText() {
 
 async function fetchWithProxies(url) {
   try {
-    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
-    const data = await response.json();
-    return data.contents;
-  } catch (e1) {
-    try {
-      const response2 = await fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`);
-      const data2 = await response2.text();
-      return data2;
-    } catch (e2) {
-      return null;
-    }
+    const response = await fetch(`http://localhost:3000/fetch?url=${encodeURIComponent(url)}`);
+    const data = await response.text();
+    return data;
+  } catch (err) {
+    return null;
   }
 }
