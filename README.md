@@ -56,5 +56,5 @@ Berikut langkah-langkah untuk membuka dan menjalankan website secara lokal:
 ## 🔗 Link Website
 
 Akses versi online dari website Fortivo melalui link berikut:  
-🌍 [https://fortivo.setionugraha.my.id](https://fortivo.setionugraha.my.id)
-🔍 [https://github.com/Rayzen7/Fortivo](https://github.com/Rayzen7/Fortivo)
+🌍 [Link Website](https://fortivo.setionugraha.my.id)
+🔍 [Link Github](https://github.com/Rayzen7/Fortivo)
